@@ -1,0 +1,35 @@
+.grid-div {
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 20px;
+align-items: center;
+align-content: center;
+}
+.cover-art {
+    width: 200px;
+    height: auto;
+}
+h1 {
+    text-align: center;
+}
+.image-gallary{
+    margin-top: 10%;
+}
+figure {
+    text-align: center;
+}
+h3 {
+    text-align: center;
+    color: rgba(255, 0, 0, .75);
+}
+figcaption {
+    font-style: italic;
+    font-size: .75em;
+}
+h1 {
+    color: rgba(255,0,0,.75);
+}
+.home-link {
+    float: right;
+    margin-top: 60%;
+}
