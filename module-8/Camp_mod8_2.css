@@ -1,0 +1,104 @@
+header{
+    background-color: brown;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1{
+    font-weight: 400;
+}
+
+#navbar {
+    overflow: hidden;
+    background-color: blue;
+    border-bottom-width: 15px;
+    border-bottom: chocolate;
+}
+#navbar a{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration-line: none;
+}
+#navbar a:hover{
+    color: red;
+    background-color: bisque;
+
+}
+#container {
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 100px;
+    padding: 10px;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 50%;
+    
+}
+.card-title{
+    text-align: center;
+    font-size: 2em;
+    color: brown;
+    font-weight: 400;
+}
+.card-content {
+    padding: 2px 16px;
+}
+.card :hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+footer {
+    font-weight: 400;
+    background-color: brown;
+    padding-right: 10px;
+    font-style: italic;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    
+    
+}
+footer p{
+    color: white;
+    font-weight: 400;
+    float: right;
+    padding-right: 10px;
+    font-style: italic;
+    background-color: brown;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+    float: right;
+    background-color: brown;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+#copyright{
+    float: left;
+    text-align: left;
+}
+#movies{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+}
+th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+}
+td{
+    border: 1px;
+    border-style: solid;
+    border-color: #ddd;
+    padding: 8px;
+}
