@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\index.html",
+    "\\module-1",
+    "\\module-2",
+    "\\module-3"
   ],
+  "SelectedNode": "\\module-2\\camp_mod2_2.css",
   "PreviewInSolutionExplorer": false
 }
