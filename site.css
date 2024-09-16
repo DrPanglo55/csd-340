@@ -13,7 +13,7 @@ h1, h2, h3, h4 {
 a.styled-link:link{
     color: #4f3674;
 }
-a,styled-link:visited{
+a.styled-link:visited{
     color: purple;
 }
 a.styled-link:hover{
