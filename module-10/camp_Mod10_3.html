@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <style>
+        .image {
+            width: 500px;
+            width: 500px;
+        }
+    </style>
+    <script>
+        function changeImage(imageName, NewSource){
+            imageName.src = NewSource;
+        }
+        function resetImage(imageName, OrgSource){
+            imageName.src = OrgSource;
+        }
+    </script>
+</head>
+<body>
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+    <h2>Umphreys-McGee and moe. host summercamp music festival</h2>
+    <h2>They each play 2 shown every day of the festival</h2>
+    <h2>hover mouse over a stage to see who is playing</h2>
+    <img id="Image1" class ="image" src="moonshinestage.jpg" alt="moonshinestage"
+         onmouseover="changeImage(this,'moe.jpg' )" onmouseout="resetImage(this, 'moonshinestage.jpg')">
+    <img id="Image2" class ="image" src="sunshinestage.jpg" alt="sunshine stage"
+         onmouseover="changeImage(this, 'Umphreys-McGee.jpg')" onmouseout="resetImage(this, 'sunshinestage.jpg')">
+    
+</body>
+</html>
