@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link href="camp_mod11_2.css" type="text/css" 
+    rel="stylesheet">
+
+</head>
+<script>
+    let todoArray = [];
+
+    function addTask(){
+        let newTask = document.getElementById("newTaskAdd");
+        let taskString = newTask.value.trim();
+        todoArray.push(taskString);
+
+        let task = document.createElement('li');
+        task.textContent = taskString;
+        var theList = document.getElementById("theList");
+        theList.appendChild(task);
+        newTask.value = "";
+    }
+
+    function viewTaskForm(){
+        var hiddenForm = document.getElementById("taskForm");
+        hiddenForm.style.display = "block";
+    }
+    function hideForm(){
+        var hiddenForm = document.getElementById("taskForm");
+        hiddenForm.style.display = "none";
+    }
+    function displayToDo(){
+        console.log("displayToDo called");
+        var todo = document.getElementById("showList");
+        todo.style.display = "block";
+        
+        document.getElementById("theList").style.display = "block";
+
+    }
+    function printList(array){
+        for(let x = 0; x < array.length; x++){
+            console.log(x+1 + ":" + array[x]);
+        }
+    }
+  
+    function hideList(){
+        let closeList = document.getElementById("showList");
+        closeList.style.display = "none";
+    }
+</script>
+<body>
+    <div id="taskForm" style="display: none;">
+        <form id="newTask" onsubmit="event.preventDefault(); hideForm();">
+            <label>enter new item for todo list</label> 
+            <input type="text" id="newTaskAdd">
+            <button type="submit" id="submitTask" onclick="hideForm(), addTask()">Submit</button>
+         </form>
+    </div>
+    <h1>Assignment 11.2: JavaScript Part 3</h1>
+  
+    <div id="buttons">
+        <button type="button" id="newTaskForm" onclick="viewTaskForm()">Add Task</button>
+        <button type ="button"onclick="displayToDo()">Display ToDo list</button>
+        <button type="button">Remove Item From List</button>
+    </div>
+    <div id="showList">
+        <ol id="theList">
+        </ol>
+        <button id="hideList"onclick="hideList()">Close List</button>
+    </div>
+    
+
+
+</body>
+</html>

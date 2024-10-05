@@ -1,0 +1,23 @@
+
+#taskForm{
+    position: fixed;
+    width: 75%;
+    height: 75%;
+    justify-content: center;
+    align-content: center;
+    display: none;
+}
+#showList{
+    display: none;
+    width: 75%;
+    height: 75%;
+    background-color: black;
+    color: aliceblue;
+}
+#mainMenu {
+    display: none;
+
+}
+#theList{
+    display: none;
+}
