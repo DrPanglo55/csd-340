@@ -1,3 +1,6 @@
+//Aaron Camp 
+//Module 11
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +16,7 @@
 
     function addTask(){
         let newTask = document.getElementById("newTaskAdd");
-        let taskString = newTask.value.trim();
+        let taskString = newTask.value;
         todoArray.push(taskString);
 
         let task = document.createElement('li');
@@ -49,6 +52,14 @@
         let closeList = document.getElementById("showList");
         closeList.style.display = "none";
     }
+    function removeTask(){
+        todoArray.pop();
+        let task = document.getElementById("theList");
+       if(theList.lastChild) {
+        theList.removeChild(theList.lastChild);
+       }
+
+    }
 </script>
 <body>
     <div id="taskForm" style="display: none;">
@@ -63,12 +74,12 @@
     <div id="buttons">
         <button type="button" id="newTaskForm" onclick="viewTaskForm()">Add Task</button>
         <button type ="button"onclick="displayToDo()">Display ToDo list</button>
-        <button type="button">Remove Item From List</button>
+        <button type="button" id="removeTask" onclick="removeTask(todoArray)">Remove</button>
     </div>
     <div id="showList">
         <ol id="theList">
         </ol>
-        <button id="hideList"onclick="hideList()">Close List</button>
+        <button id="hideList"onclick="hideList()">Close List</button>    
     </div>
     
 
