@@ -1,0 +1,77 @@
+// Aaron camp_mod3_3
+// mod 12
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSD 340 Web Development with HTML and CSS</title>
+    <link href="camp_mod3_3.css" type="text/css" 
+            rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="container">
+        <h1 style="text-align:center">Assignment 12.2: JavaScript - Part 4</h1>
+    </div>
+    <div class="float-container">
+        <div class="float-child">
+            <div class="border-container1">
+                <h3>My Top 10 Favorite Books</h3>
+                <button type="button" onclick="topToBottom()">Top to Bottom</button>
+                <button type="button" onclick="bottomToTop()">Bottom to Top</button>
+                <ol id="bookList">
+                    <li>Voltaire</li>
+                    <li>Electric Kool Aid Acid Test</li>
+                    <li>Been Down So Long it Looks Like Up to Me</li>
+                    <li>Demon Haunted World</li>
+                    <li>Crime and Punishment</li>
+                    <li>On the Road</li>
+                    <li>Beautiful You</li>
+                    <li>One Flew Over the Cuckoo's Nest</li>
+                    <li>Welcome to the Monkey House</li>
+                    <li>Still Life with Woodpecker</li>
+                </ol>
+            </div>
+        </div>
+        <div class="float-child">
+            <div class="border-container2">
+                <h3>5 Things I’ve Learned Since the Course Started</h3>
+                <ul>
+                    <li>There are several ways to select color in CSS</li>
+                    <li>CSS file is linked inside the HTML file </li>
+                    <li>You can provide some basic text styleing with just HTML </li>
+                    <li>HTML and CSS files are human readable</li>
+                    <li>HTML uses tags to seperate contents of a page</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <div class="lastDiv">
+            <a href="https://drpanglo55.github.io/csd-340/">Home Page</a>      
+        </div> 
+        <script>
+            var topTen = document.getElementById("bookList");
+            var books = topTen.getElementsByTagName("li");
+            var bookArray = Array.from(books,item => item.textContent);
+            function topToBottom(){
+                bookArray.sort();
+                remakeList(bookArray, 1);
+            }
+            function bottomToTop(){
+                bookArray.sort().reverse();
+                remakeList(bookArray, 10);
+            }
+            function remakeList(arr, startNum){
+                topTen.innerHTML = "";
+                topTen.setAttribute("start", startNum);
+                for (var i = 0; i < arr.length; i++){
+                    var book = document.createElement("li");
+                    book.textContent = arr[i];
+                    topTen.appendChild(book);
+                }
+            }
+        </script>   
+</body>
+</html>
